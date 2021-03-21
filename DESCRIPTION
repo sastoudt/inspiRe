@@ -1,16 +1,17 @@
 Package: inspiRe
-Title: What the Package Does (One Line, Title Case)
+Title: Get Storytelling with Data Inspiration
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Sara",
+           family = "Stoudt",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "sstoudt@smith.edu",
+           comment = c(ORCID = "0000-0002-1693-8058"))
+Description: like the praise package but will give you a random URL for inspiration, also a bit like StumbleUpon, URLs submitted by the community, theme of storytelling with data
+License: `use_gpl3_license()` 
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports:
+  pkgcond
