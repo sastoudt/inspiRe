@@ -7,8 +7,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "sstoudt@smith.edu",
            comment = c(ORCID = "0000-0002-1693-8058"))
-Description: like the praise package but will give you a random URL for inspiration, also a bit like StumbleUpon, URLs submitted by the community, theme of storytelling with data
-License: `use_gpl3_license()` 
+Description: Like the praise package but will give you a random URL for inspiration, also a bit like StumbleUpon, URLs submitted by the community, theme of storytelling with data.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
