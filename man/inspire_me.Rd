@@ -19,5 +19,5 @@ inspire_me(author = "", affiliation = "", topic = "", type = "")
 A URL
 }
 \description{
-This functions returns a random URL of data storytelling inspiration based #' on our contributed list. Users can specify author, affiliation, topic, or #' type if they wish.
+This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish.
 }

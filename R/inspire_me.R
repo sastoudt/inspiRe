@@ -1,6 +1,6 @@
 #' Get some data storytelling inspiration
 #'
-#' This functions returns a random URL of data storytelling inspiration based #' on our contributed list. Users can specify author, affiliation, topic, or #' type if they wish.
+#' This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish.
 #'
 #' @param author optional parameter to specify desired author of returned content
 #' @param affiliation optional parameter to specify desired affiliation of content
@@ -9,7 +9,7 @@
 #' @return A URL
 #' @export
 inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
-  data <- pkgcond::suppress_warnings(read.csv(system.file("extdata", "links.csv", package = "inspiRe"), stringsAsFactors = F), "incomplete final line")
+  data <- pkgcond::suppress_warnings(utils::read.csv(system.file("extdata", "links.csv", package = "inspiRe"), stringsAsFactors = F), "incomplete final line")
 
   if (author != "") {
     data <- subset(data, author_name == author)
