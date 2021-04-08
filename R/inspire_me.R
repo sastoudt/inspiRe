@@ -9,7 +9,12 @@
 #' @return A URL
 #' @export
 inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
-  data <- pkgcond::suppress_warnings(utils::read.csv(system.file("extdata", "links.csv", package = "inspiRe"), stringsAsFactors = F), "incomplete final line")
+  data <- read.table(
+    text = readLines(system.file("extdata", "links.csv", package = "inspiRe"), warn = FALSE),
+    header = TRUE,
+    sep = ",",
+    stringsAsFactors = FALSE
+  )
 
   if (author != "") {
     data <- subset(data, grepl(author, author_name, ignore.case = TRUE))
