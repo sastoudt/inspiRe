@@ -9,7 +9,7 @@
 #' @return A URL
 #' @export
 inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
-  data <- read.table(
+  data <- utils::read.table(
     text = readLines(system.file("extdata", "links.csv", package = "inspiRe"), warn = FALSE),
     header = TRUE,
     sep = ",",
