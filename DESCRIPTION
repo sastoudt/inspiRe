@@ -1,6 +1,6 @@
 Package: inspiRe
 Title: Get Storytelling with Data Inspiration
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "Sara",
            family = "Stoudt",
@@ -13,5 +13,3 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Imports:
-  pkgcond
