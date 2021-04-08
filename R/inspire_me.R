@@ -12,19 +12,19 @@ inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
   data <- pkgcond::suppress_warnings(utils::read.csv(system.file("extdata", "links.csv", package = "inspiRe"), stringsAsFactors = F), "incomplete final line")
 
   if (author != "") {
-    data <- subset(data, author_name == author)
+    data <- subset(data, grepl(author, author_name, ignore.case = TRUE))
   }
 
   if (affiliation != "") {
-    data <- subset(data, author_affiliation == affiliation)
+    data <- subset(data, grepl(affiliation, author_affiliation, ignore.case = TRUE))
   }
 
   if (topic != "") {
-    data <- subset(data, content_topic == topic)
+    data <- subset(data, grepl(topic, content_topic, ignore.case = TRUE))
   }
 
   if (type != "") {
-    data <- subset(data, content_type == type)
+    data <- subset(data, grepl(type, content_type, ignore.case = TRUE))
   }
 
   num_inspire <- nrow(data)
