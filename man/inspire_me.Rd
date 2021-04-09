@@ -4,7 +4,7 @@
 \alias{inspire_me}
 \title{Get some data storytelling inspiration}
 \usage{
-inspire_me(author = "", affiliation = "", topic = "", type = "")
+inspire_me(author = "", affiliation = "", topic = "", type = "", open = FALSE)
 }
 \arguments{
 \item{author}{optional parameter to specify desired author of returned content}
@@ -14,10 +14,12 @@ inspire_me(author = "", affiliation = "", topic = "", type = "")
 \item{topic}{optional parameter to specify desired topic of returned content}
 
 \item{type}{optional parameter to specify desired type of returned content}
+
+\item{open}{whether to open the URL in a browser. Defaults to \code{FALSE}}
 }
 \value{
 A URL
 }
 \description{
-This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish.
+This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish. If \code{open = TRUE} and the session is interactive, then the URL will be opened in the user's browser.
 }

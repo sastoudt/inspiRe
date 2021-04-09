@@ -1,14 +1,15 @@
 #' Get some data storytelling inspiration
 #'
-#' This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish.
+#' This functions returns a random URL of data storytelling inspiration based on our contributed list. Users can specify author, affiliation, topic, or type if they wish. If \code{open = TRUE} and the session is interactive, then the URL will be opened in the user's browser.
 #'
 #' @param author optional parameter to specify desired author of returned content
 #' @param affiliation optional parameter to specify desired affiliation of content
 #' @param topic optional parameter to specify desired topic of returned content
 #' @param type optional parameter to specify desired type of returned content
+#' @param open whether to open the URL in a browser. Defaults to \code{FALSE}
 #' @return A URL
 #' @export
-inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
+inspire_me <- function(author = "", affiliation = "", topic = "", type = "", open = FALSE) {
   data <- utils::read.table(
     text = readLines(system.file("extdata", "links.csv", package = "inspiRe"), warn = FALSE),
     header = TRUE,
@@ -38,6 +39,15 @@ inspire_me <- function(author = "", affiliation = "", topic = "", type = "") {
     return("Sorry, there are no inspirations with your specifications. Try different specifications.")
   } else {
     idx <- sample(1:num_inspire, 1)
-    return(data$url[idx])
+    url <- data$url[idx]
   }
+
+  if (interactive() & open) {
+    utils::browseURL(
+      url = url,
+      browser = getOption("browser")
+    )
+  }
+
+  return(url)
 }
