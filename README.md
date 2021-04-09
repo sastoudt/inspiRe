@@ -29,7 +29,7 @@ function will return a link that you can explore.
 library(inspiRe)
 
 inspire_me()
-#> [1] "https://github.com/allisonhorst/stats-illustrations"
+#> [1] "https://nautil.us/blog/you-want-to-see-my-data-i-thought-we-were-friends"
 ```
 
 If you’re looking for something in particular, you can filter the
@@ -39,6 +39,12 @@ arguments!
 ``` r
 inspire_me(type = "data visualization")
 #> [1] "http://www.rebeccabarter.com/blog/2019-01-21_world_happiness/"
+```
+
+To have the URL automatically open in your browser, set `open = TRUE`:
+
+``` r
+inspire_me(open = TRUE)
 ```
 
 **How to contribute:**

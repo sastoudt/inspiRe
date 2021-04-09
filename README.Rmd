@@ -46,6 +46,11 @@ If you're looking for something in particular, you can filter the inspiration us
 inspire_me(type = "data visualization")
 ```
 
+To have the URL automatically open in your browser, set `open = TRUE`:
+
+```{r, eval = FALSE}
+inspire_me(open = TRUE)
+```
 
 **How to contribute:**
 
